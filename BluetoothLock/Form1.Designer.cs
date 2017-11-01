@@ -30,30 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.button_GetDevice = new System.Windows.Forms.Button();
-            this.textBox_DeviceList = new System.Windows.Forms.TextBox();
             this.button_Connect = new System.Windows.Forms.Button();
             this.button_DisConnect = new System.Windows.Forms.Button();
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.notifyIcon_Main = new System.Windows.Forms.NotifyIcon(this.components);
             this.button_Exit = new System.Windows.Forms.Button();
+            this.button_Status = new System.Windows.Forms.Button();
+            this.contextMenuStrip_NotifyIconMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem_Show = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_Exit = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip_NotifyIconMenu.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button_GetDevice
-            // 
-            this.button_GetDevice.Location = new System.Drawing.Point(114, 72);
-            this.button_GetDevice.Name = "button_GetDevice";
-            this.button_GetDevice.Size = new System.Drawing.Size(104, 23);
-            this.button_GetDevice.TabIndex = 0;
-            this.button_GetDevice.Text = "获取设备列表";
-            this.button_GetDevice.UseVisualStyleBackColor = true;
-            // 
-            // textBox_DeviceList
-            // 
-            this.textBox_DeviceList.Location = new System.Drawing.Point(118, 157);
-            this.textBox_DeviceList.Multiline = true;
-            this.textBox_DeviceList.Name = "textBox_DeviceList";
-            this.textBox_DeviceList.Size = new System.Drawing.Size(483, 227);
-            this.textBox_DeviceList.TabIndex = 1;
             // 
             // button_Connect
             // 
@@ -73,11 +59,12 @@
             this.button_DisConnect.Text = "断开爪机";
             this.button_DisConnect.UseVisualStyleBackColor = true;
             // 
-            // notifyIcon1
+            // notifyIcon_Main
             // 
-            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = "notifyIcon1";
-            this.notifyIcon1.Visible = true;
+            this.notifyIcon_Main.ContextMenuStrip = this.contextMenuStrip_NotifyIconMenu;
+            this.notifyIcon_Main.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon_Main.Icon")));
+            this.notifyIcon_Main.Text = "notifyIcon1";
+            this.notifyIcon_Main.Visible = true;
             // 
             // button_Exit
             // 
@@ -88,31 +75,64 @@
             this.button_Exit.Text = "退出程序";
             this.button_Exit.UseVisualStyleBackColor = true;
             // 
+            // button_Status
+            // 
+            this.button_Status.BackColor = System.Drawing.Color.Red;
+            this.button_Status.Location = new System.Drawing.Point(143, 210);
+            this.button_Status.Name = "button_Status";
+            this.button_Status.Size = new System.Drawing.Size(75, 23);
+            this.button_Status.TabIndex = 5;
+            this.button_Status.UseVisualStyleBackColor = false;
+            // 
+            // contextMenuStrip_NotifyIconMenu
+            // 
+            this.contextMenuStrip_NotifyIconMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem_Show,
+            this.toolStripMenuItem_Exit});
+            this.contextMenuStrip_NotifyIconMenu.Name = "contextMenuStrip_NotifyIconMenu";
+            this.contextMenuStrip_NotifyIconMenu.Size = new System.Drawing.Size(125, 48);
+            // 
+            // toolStripMenuItem_Show
+            // 
+            this.toolStripMenuItem_Show.Image = global::BluetoothLock.Properties.Resources.television;
+            this.toolStripMenuItem_Show.Name = "toolStripMenuItem_Show";
+            this.toolStripMenuItem_Show.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem_Show.Text = "显示窗口";
+            // 
+            // toolStripMenuItem_Exit
+            // 
+            this.toolStripMenuItem_Exit.Image = global::BluetoothLock.Properties.Resources.cross;
+            this.toolStripMenuItem_Exit.Name = "toolStripMenuItem_Exit";
+            this.toolStripMenuItem_Exit.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem_Exit.Text = "退出程序";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 455);
+            this.Controls.Add(this.button_Status);
             this.Controls.Add(this.button_Exit);
             this.Controls.Add(this.button_DisConnect);
             this.Controls.Add(this.button_Connect);
-            this.Controls.Add(this.textBox_DeviceList);
-            this.Controls.Add(this.button_GetDevice);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.contextMenuStrip_NotifyIconMenu.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button_GetDevice;
-        private System.Windows.Forms.TextBox textBox_DeviceList;
         private System.Windows.Forms.Button button_Connect;
         private System.Windows.Forms.Button button_DisConnect;
-        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.NotifyIcon notifyIcon_Main;
         private System.Windows.Forms.Button button_Exit;
+        private System.Windows.Forms.Button button_Status;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip_NotifyIconMenu;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Show;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Exit;
     }
 }
 
